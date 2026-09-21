@@ -1,16 +1,16 @@
 #!/bin/bash
-# Default deny public zone with service rule(s) allowed
+# Default deny public zone with service rule(s) allowed to specific source IP
 set -euo pipefail
 
 # Service Configuration
-GATEWAYIP="192.168.1.1"
+SOURCEIP="192.168.1.1"
 SVCPORT1="443"
 #SVCPORT2=""
 SVCPROTO1="tcp"
 #SVCPROTO2=""
 #
 # 1. Add additional service ports
-sudo firewall-cmd --permanent --add-rich-rule="rule family=\"ipv4\" source address=\"$GATEWAYIP\" port port=\"$SVCPORT1\" protocol=\"$SVCPROTO1\" accept"
+sudo firewall-cmd --permanent --add-rich-rule="rule family=\"ipv4\" source address=\"$SOURCEIP\" port port=\"$SVCPORT1\" protocol=\"$SVCPROTO1\" accept"
 sudo firewall-cmd --reload
 #sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=\"$GATEWAYIP\" port port=\"$SVCPORT2\" protocol=\"$SVCPROTO2\" accept' && sudo firewall-cmd --reload
 
