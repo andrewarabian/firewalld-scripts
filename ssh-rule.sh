@@ -1,4 +1,5 @@
 #!/bin/bash
+# Default deny public zone with ssh rule(s) allowed to specific IP range or subnet
 set -euo pipefail
 
 # SSH Configuration
@@ -44,4 +45,3 @@ sudo firewall-cmd --list-all
 #
 # sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.1.50" service name="ssh" accept'
 echo -e "\033[0;32mScript finished\033[0m"
-
