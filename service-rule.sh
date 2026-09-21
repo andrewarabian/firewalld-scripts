@@ -12,7 +12,7 @@ SVCPROTO1="tcp"
 # 1. Add additional service ports
 sudo firewall-cmd --permanent --add-rich-rule="rule family=\"ipv4\" source address=\"$SOURCEIP\" port port=\"$SVCPORT1\" protocol=\"$SVCPROTO1\" accept"
 sudo firewall-cmd --reload
-#sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=\"$GATEWAYIP\" port port=\"$SVCPORT2\" protocol=\"$SVCPROTO2\" accept' && sudo firewall-cmd --reload
+#sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address=\"$SOURCEIP\" port port=\"$SVCPORT2\" protocol=\"$SVCPROTO2\" accept' && sudo firewall-cmd --reload
 
 # 2. Other config changes.
 #sudo firewall-cmd --permanent --zone=public --remove-service=cockpit
