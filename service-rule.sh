@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Service Configuration
-SOURCEIP="192.168.1.1"
+SOURCEIP="192.168.1.1" # for entire subnet ranges add /24
 SVCPORT1="443"
 #SVCPORT2=""
 SVCPROTO1="tcp"
