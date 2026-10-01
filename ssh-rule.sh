@@ -1,5 +1,7 @@
 #!/bin/bash
-# Default deny public zone with ssh rule(s) allowed to specific IP range or subnet
+# Default deny public zone 
+# SSH rule(s) allowed to specific IP / subnet
+ 
 set -euo pipefail
 
 # SSH Configuration
